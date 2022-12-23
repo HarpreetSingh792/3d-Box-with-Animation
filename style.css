@@ -1,0 +1,68 @@
+:root{
+    --background-color:linear-gradient(red,black);
+    --box-border-color:white;
+    --text-color:var(--box-border-color);
+}
+body{
+    height: 100vh;
+    width:100vw;
+    background:var(--background-color);
+}
+.container
+{
+
+    position: absolute;
+    width: 450px;
+    height:450px;
+    top:10vh;
+    left:20vw;
+    perspective: 1000px;
+}
+.box
+{
+    transform: rotateX(-30deg) rotateY(45deg);
+    position: relative;
+    width: 250px;
+    height: 250px;
+    top:16vh;
+    left:13vw;
+    transform-style: preserve-3d;
+    transition: all 1.0s;
+}
+.card
+{
+    position: absolute;
+    background-color: black;
+    border: 5px solid var(--box-border-color);
+    color:var(--text-color);
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    padding: 100px 0;
+    box-sizing: border-box;
+}
+#top
+{
+    bottom:125px;
+    transform: rotateX(90deg) translateY(125px);
+}
+#right{
+    left:125px;
+    transform: rotateY(90deg) translateX(-125px);
+}
+#bottom
+{
+    top:125px;
+    transform: rotateX(-90deg) translateY(-125px);
+}
+
+#left{
+    right:125px;
+    transform: rotateY(90deg) translateX(-125px);
+}
+
+#front
+{
+    transform: translateZ(250px);
+}
+
